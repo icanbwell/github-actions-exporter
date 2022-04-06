@@ -39,7 +39,7 @@ func getFieldValue(repo string, run github.WorkflowRun, field string) string {
 }
 
 //
-func getRelevantFields(repo string, run *github.WorkflowRun) []string {
+func getRelevantFields(repo string, run github.WorkflowRun) []string {
 	relevantFields := strings.Split(config.WorkflowFields, ",")
 	result := make([]string, len(relevantFields))
 	for i, field := range relevantFields {
